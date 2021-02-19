@@ -46,7 +46,19 @@ const orm = {
 			cb(result);
 		});
 	},
-	create(table, cols, vals, cb) {
+
+	selectOne(tableInput, cb, condition) {
+		let queryString = `SELECT * FROM ${tableInput}`;
+		queryString += ` WHERE ${condition}`;
+		connection.query(queryString, (err, result) => {
+			if (err) {
+				throw err;
+			}
+			cb(result);
+		});
+	},
+
+	insertOne(table, cols, vals, cb) {
 		let queryString = `INSERT INTO ${table}`;
 
 		queryString += ' (';
@@ -67,7 +79,7 @@ const orm = {
 		});
 	},
 	// An example of objColVals would be {name: panther, sleepy: true}
-	update(table, objColVals, condition, cb) {
+	updateOne(table, objColVals, condition, cb) {
 		let queryString = `UPDATE ${table}`;
 
 		queryString += ' SET ';
@@ -99,5 +111,5 @@ const orm = {
 	},
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model.
 module.exports = orm;
