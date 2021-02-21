@@ -17,8 +17,7 @@ Mobile first, HTML5, Bootstrap, MySQL, React, HandleBars app deployed to Heroku.
 * [View it on GitHub](https://github.com/JayArghArgh/eat-da-burger)
 * [View my updated portfolio](http://jayarghargh.com)
 
-![screenshot](./public/assets/img/screenshot_web.png)
-![screenshot](./public/assets/img/screenshot_responsive.png)
+![screenshot](./public/assets/img/screenshot_combined.png)
 
 ## Installation
 N/A
