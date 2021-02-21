@@ -23,6 +23,10 @@ body::after {
     margin: 12px;
 }
 
+.burger-content li:not(:last-child) {
+    margin-bottom: 0.75em;
+}
+
 li a {
     text-decoration: none;
     color: white;
@@ -58,4 +62,27 @@ li a hover {
     padding-top: 12px;
     background: black;
     color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.wavey {
+    position: relative;
+    /*top: 55px;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*z-index: 1;*/
+}
+
+.burgers
+{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+    width: 99%;
 }
