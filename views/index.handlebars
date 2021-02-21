@@ -2,15 +2,15 @@
 	<div class="col-md-6 col-sm-12">
 		<div class="burger-content border border-danger rounded">
 			<h2>Undevoured Burgers</h2>
-			<div class="list-group">
-				<ul>
+
+				<ul class="fa-ul">
 					{{#each burgers}}
 						{{#unless devoured}}
 							{{> burgers/burger-block devoured=false}}
 						{{/unless}}
 					{{/each}}
 				</ul>
-			</div>
+
 		</div>
 	</div>
 
@@ -18,7 +18,7 @@
 		<div class="burger-content border border-danger rounded">
 			<h2>Devoured Burgers</h2>
 
-			<ul>
+			<ul class="fa-ul">
 				{{#each burgers}}
 					{{#if devoured}}
 						{{> burgers/burger-block devoured=true}}

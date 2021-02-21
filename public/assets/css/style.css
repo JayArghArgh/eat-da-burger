@@ -22,14 +22,14 @@ body::after {
     padding: 12px;
     margin: 12px;
 }
-ul {
-    list-style: none;
-    padding: 0;
+
+li a {
+    text-decoration: none;
+    color: white;
 }
 
-li {
-    padding-left: 1.3em;
-    list-style-type: none;
+li a hover {
+    color: #ff5500;
 }
 
 .delete-burger-btn {
@@ -43,7 +43,19 @@ li {
     /*outline: inherit;*/
 }
 
+.change-status-btn {
+    /*button, input[type="submit"], input[type="reset"] {*/
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    /*cursor: pointer;*/
+    /*outline: inherit;*/
+}
+
 .footer {
+    padding-top: 12px;
     background: black;
     color: whitesmoke;
 }
