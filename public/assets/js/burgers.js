@@ -85,12 +85,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	deleteBurgerBtns.forEach((button) => {
 		button.addEventListener('click', (e) => {
 			const id = e.target.getAttribute('data-id');
-
 			// Send the delete request
 			fetch(`/api/burgers/${id}`, {
 				method: 'DELETE',
 			}).then((res) => {
-
 				// Reload the page
 				location.reload();
 			});
