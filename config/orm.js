@@ -37,7 +37,7 @@ const objToSql = (ob) => {
 
 // Object for all our SQL statement functions.
 const orm = {
-	all(tableInput, cb) {
+	selectAll(tableInput, cb) {
 		const queryString = `SELECT * FROM ${tableInput};`;
 		connection.query(queryString, (err, result) => {
 			if (err) {
@@ -68,8 +68,6 @@ const orm = {
 		queryString += printQuestionMarks(vals.length);
 		queryString += ') ';
 
-		console.log(queryString);
-
 		connection.query(queryString, vals, (err, result) => {
 			if (err) {
 				throw err;
@@ -86,8 +84,6 @@ const orm = {
 		queryString += objToSql(objColVals);
 		queryString += ' WHERE ';
 		queryString += condition;
-
-		console.log(queryString);
 		connection.query(queryString, (err, result) => {
 			if (err) {
 				throw err;
