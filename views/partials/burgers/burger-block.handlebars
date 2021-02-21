@@ -1,8 +1,10 @@
 <li>
 	{{burger_name}}
-	<button class="change-status" data-id="{{id}}" data-newsleep={{devoured}}>
-		{{#if devoured}}Refresh!{{else}}DEVOUr!{{/if}}
+	{{#unless devoured}}
+	<button type="button" class="change-status btn btn-warning" data-id="{{id}}" data-newsleep={{devoured}}>
+		DEVOUR IT!!!
 	</button>
+	{{/unless}}
 
-	<button class="delete-burger" data-id="{{id}}" data-newsleep=1>DELETE!</button>
+<!--	<button class="delete-burger" data-id="{{id}}" data-newsleep=1>DELETE!</button>-->
 </li>
